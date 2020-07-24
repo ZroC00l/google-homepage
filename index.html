@@ -2,38 +2,137 @@
 <html>
 <head>
 	<title>Google</title>
+	
+	<style>
+		#nav-bar{
+			top:0;
+			color:white;
+			text-align:right;
+			list-style-type: none;
+
+		}
+
+		#menu-items li{
+
+			display:inline-block;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-right: 3px;
+			padding-left: 3px;
+			font-size: 16px;
+			color:black;
+		}
+
+		img{
+
+			margin-top: 10%;
+			display:block;
+			margin-left: auto;
+			margin-right:auto;
+			width:20%;
+
+		}
+
+		#search-box{
+
+			display: block;
+			margin-top: 5%;
+			margin-left: auto;
+			margin-right:auto;
+			width:50%;
+			border-radius: 5px;
+			margin-bottom: 1%;
+			margin-top: 1%;
+			padding-top:10px;
+			padding-bottom: 10px;
+		}
+		button{
+
+			border-radius: 5px;
+			background-color: lightgray;
+			margin-top: 1%;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			
+
+		}
+
+		footer{
+			position: fixed;
+			bottom:0;
+			width:1000%;
+			background-color: lightgray;
+			color:gray;
+
+		}
+
+		.country li{
+			list-style-type: none;
+
+		}
+
+		#footer-align-left li{
+			display:inline-block;
+			list-style-type: none;
+			float:left;
+			padding-right: 5px;
+			left: 0;
+			color:gray;
+
+
+		}
+		#footer-align-right li{
+			display:inline-block;
+			list-style-type: none;
+			float:right;
+			padding-right: 5px;
+			color:gray;
+		}
+		#menu-burger div{
+			width: 20px;
+  			height: 3px;
+  			background-color: black;
+  			margin: 4px;
+		}
+
+	</style>	
 
 </head>
 <body>
 <main>
 
 	<nav id="nav-bar">
-		<ul>
+		<ul id="menu-items">
 			<a href="#" target="_blank"><li>Gmail</li></a>
 			<a href="#"><li>Images</li></a>
-			<a href="#"><li></li></a>
+			<a href="#" id="menu-burger">
+			<a href="#" target="_blank"><li></li></a>
 			<a href="#"><li></li></a>
 		</ul>
 	</nav>
 	<img src="logo.png" alt="google-logo"">
-	<footer id="footer">
-		South Africa
-		<hr>
-	<div class="footer-align-left">	
-		<ul>
+
+
+	<input type="text" name="search-box" id="search-box">
+	<div style="text-align: center">
+		<a href="#" target="_blank"><button id="button-one">Google Search</button></a>
+		<a href="#" target="_blank"><button id="button-two">I'm Feeling Lucky </button></a>
+	</div>
+	<footer>
+		<ul class="country">
+			<li>South Africa</li>
+		</ul>
+		<ul id="footer-align-left">
 			<a href="#" target="_blank"><li>Advertising</li></a>
 			<a href="#" target="_blank"><li>Business</li></a>
 			<a href="#" target="_blank"><li>About</li></a>
 			<a href="#" target="_blank"><li>How Search works</li></a>
 		</ul>
-	</div>
-	<div class="footer-align-right">
-		<ul>
+		<ul id="footer-align-right">
 			<a href="#" target="_blank"><li>Privacy</li></a>
 			<a href="#" target="_blank"><li>Terms</li></a>
 			<a href="#" target="_blank"><li>Settings</li></a>
 		</ul>	
-	</div>	
 	</footer>
 
 </main>
