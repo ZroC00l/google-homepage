@@ -4,107 +4,145 @@
 	<title>Google</title>
 	
 	<style>
-		#nav-bar{
+		.nav-bar{
 			top:0;
-			color:white;
-			text-align:right;
-			list-style-type: none;
-
+		}
+		ul{
+			list-style-type:none;
+			overflow:hidden;
+		}
+		li{
+			float:right;
 		}
 
-		#menu-items li{
-
-			display:inline-block;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			padding-right: 3px;
-			padding-left: 3px;
-			font-size: 16px;
-			color:black;
-			
-
-		}
-
-
-		img{
-
-			margin-top: 10%;
-			display:block;
-			margin-left: auto;
-			margin-right:auto;
-			width:20%;
-
-		}
-
-		#search-box{
-
+		li a{
+			color:#000;
 			display: block;
-			margin-top: 5%;
-			margin-left: auto;
-			margin-right:auto;
-			width:50%;
-			border-radius: 5px;
-			margin-bottom: 1%;
-			margin-top: 1%;
-			padding-top:10px;
-			padding-bottom: 10px;
+			text-align: center;
+			padding: 10px 10px;
+			text-decoration: none;
+			font-size: 14px;
 		}
-		button{
 
-			border-radius: 5px;
-			background-color: lightgray;
-			margin-top: 1%;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			
+		li a:hover{
+			text-decoration:underline; 
+		}
 
+		.grid{
+			height:23px;
+			position: relative;
+			bottom: 4px;
+		}
+
+		.signbutton{
+			background-color: #4885ed;
+			color:#fff;
+			border:none;
+			border-radius: 3px;
+			padding:7px 10px;
+			position: relative;
+			bottom:7px;
+			font-weight: bold;
+		}
+		.logo{
+
+			margin-top: 200px;
+			margin-bottom: 20px;
+		}
+		.bar{
+			margin:0 auto;
+			width:575px;
+			border-radius: 30px;
+			border:1px solid #dcdcdc;
+		}
+		.bar:hover{
+			box-shadow:1px 1px 8px 1px #dcdcdc;
+		}
+		.bar:focus-within{
+			box-shadow: 1px 1px 8px #dcdcdc;
+			outline:none;
+		}
+		.searchbar{
+			height:45px;
+			border:none;
+			width:500px;
+			font-size:16px;
+			outline:none;
+		}
+		.voice{
+			height:20px;
+			position: relative;
+			top:5px;
+			left:10px;
+		}
+		.buttons{
+			margin-top: 30px;
+		}
+		.button{
+			background-color: #f5f5f5;
+			border:none;
+			color:#707070;
+			font-size:15px;
+			padding: 10px 20px;
+			margin:5px;
+			border-radius: 4px;
+			outline:none;
+		}
+		.button:hover{
+			border:1px solid #c8c8c8;
+			padding:9px 19px;
+			color:#808080;
+		}
+		.button:focus{
+			border:1px solid #4885ed;
+			padding:9px 19px;
 		}
 
 		footer{
+			border:1px solid #E8E8E8;
 			position: fixed;
 			bottom:0;
 			width:100%;
-			background-color: lightgray;
-			color:gray;
-			left:0;	
-			padding-bottom: 10px;
-			padding-top: 5px;
+			background-color: #F0F0F0;
+			padding-bottom: 15px;
 
+		}
+		hr{
+			border:1px solid #E8E8E8;
+		
+		}
+
+		p{
+			margin-left:35px;
+			color:#707070;
+			font-size:16px;
 
 
 		}
-
-		.country li{
-			list-style-type: none;
-
+		p a{
+			text-decoration: none;
+			color:#707070;
+		}
+		p a:hover{
+			text-decoration: underline;
 		}
 
-		#footer-align-left li{
-			display:inline-block;
-			list-style-type: none;
+		.align-right{
+			float: right;
+			padding-right: 15px;
+		
+		}
+		.align-left{
 			float:left;
-			padding-right: 5px;
-			left: 0;
-			color:gray;
+			padding-right:15px
 			
+		}
 
 
+		
 
-		}
-		#footer-align-right li{
-			display:inline-block;
-			list-style-type: none;
-			float:right;
-			padding-right: 5px;
-			padding-left: 5px;
-			color:gray;
-		}
-		#menu-burger div{
-			width: 20px;
-  			height: 3px;
-  			background-color: black;
-  			margin: 4px;
-		}
+
+		
 
 	</style>	
 
@@ -112,39 +150,48 @@
 <body>
 <main>
 
-	<nav id="nav-bar">
-		<ul id="menu-items">
-			<a href="#" target="_blank"><li>Gmail</li></a>
-			<a href="#"><li>Images</li></a>
-			<a href="#" id="menu-burger">
-			<a href="#" target="_blank"><li></li></a>
-			<a href="#"><li></li></a>
+	<nav class="nav-bar">
+		<ul>
+			<li><a href="#">Gmail</a></li>
+			<li><a href="#">Images</a></li>
+			<li><a href="#"><img class="grid" src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png" title="Google apps"></a></li>
+			<li><a href="#" ><button class="signbutton" type="button">Sign in</button></a></li>
 		</ul>
 	</nav>
-	<img src="logo.png" alt="google-logo">
 
-
-	<input type="text" name="search-box" id="search-box">
-	<div style="text-align: center">
-		<a href="#" target="_blank"><button id="button-one">Google Search</button></a>
-		<a href="#" target="_blank"><button id="button-two">I'm Feeling Lucky </button></a>
+	<center>
+	<div class="logo">
+		<img src="logo.png" alt="google-logo">
 	</div>
+
+	<div class="bar">
+		<input class="searchbar" type="text" title="Search">
+		<a href="#">
+			<img class="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice">
+		</a>
+
+	</div>
+
+	<div class="buttons">
+		<button class="button" type="button">Google Search</button>
+		<button class="button" type="button">I'm Feeling Lucky</button>
+	<div>
+	</center>
+
 	<footer>
-		<ul class="country">
-			<li>South Africa</li>
-		</ul>
+		<p >South Africa</p>
 		<hr>
-		<ul id="footer-align-left">
-			<a href="#" target="_blank"><li>Advertising</li></a>
-			<a href="#" target="_blank"><li>Business</li></a>
-			<a href="#" target="_blank"><li>About</li></a>
-			<a href="#" target="_blank"><li>How Search works</li></a>
-		</ul>
-		<ul id="footer-align-right">
-			<a href="#" target="_blank"><li>Privacy</li></a>
-			<a href="#" target="_blank"><li>Terms</li></a>
-			<a href="#" target="_blank"><li>Settings</li></a>
-		</ul>	
+		<p >
+			<span class="align-left"><a href="#" target="_blank">Advertising</a></span>
+			<span class="align-left"><a href="#" target="_blank">Business</a></span>
+			<span class="align-left"><a href="#" target="_blank"> About</a></span>
+			<span class="align-left"><a href="#" target="_blank"> How Search Works</a></span>
+			
+			<span class="align-right"><a href="#" target="_blank"> Privacy</a></span>
+			<span class="align-right"><a href="#" target="_blank"> Terms</a></span>
+			<span class="align-right"><a href="#" target="_blank"> Settings</a></span>
+		</p>
+
 	</footer>
 
 </main>
